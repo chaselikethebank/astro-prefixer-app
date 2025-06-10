@@ -12,7 +12,9 @@
   <body
     style="font-family:sans-serif; padding:1rem; max-width:900px; margin:auto;"
   >
-    <div style="max-width:900px; margin:2rem auto; padding:1rem; font-size:0.75rem; line-height:.75;">
+    <div
+      style="max-width:900px; margin:2rem auto; padding:1rem; font-size:0.75rem; line-height:1;"
+    >
       <h1>CSS Class Prefixer</h1>
       <h2>About</h2>
       <p>
@@ -32,7 +34,7 @@
 
       <label for="prefix">Prefix):</label><br />
       <input
-	  	style="font-size:0.75rem;"
+        style="font-size:0.75rem;"
         id="prefix"
         type="text"
         value="x"
@@ -41,16 +43,26 @@
 
       <label for="input">Paste your HTML snippet:</label><br />
       <textarea
-	  	style="font-size:0.75rem;"
+        style="font-size:0.75rem;"
         id="input"
         rows="10"
         cols="80"
-        placeholder="Paste your HTML here"
+        placeholder=
+`<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">Card header</p>
+      <button class="card-header-icon" aria-label="more options">
+        <span class="icon">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+  </header>
+</div>`
         style="font-family: monospace; font-size: 0.9rem; margin-bottom:1rem;"
       ></textarea><br />
 
       <button
-	  	style="font-size:0.75rem;"
+        style="font-size:0.75rem;"
         type="button"
         onclick="prefixClasses()"
         style="padding: 0.5rem 1rem; font-size:1rem; margin-bottom:1rem;"
@@ -61,7 +73,7 @@
 
       <label for="output">Prefixed HTML output:</label><br />
       <textarea
-	  	style="font-size:0.75rem;"
+        style="font-size:0.75rem;"
         id="output"
         rows="10"
         cols="80"
@@ -71,7 +83,7 @@
       ></textarea><br />
 
       <button
-	  	style="font-size:0.75rem;"
+        style="font-size:0.75rem;"
         type="button"
         onclick="copyOutput()"
         style="padding: 0.5rem 1rem; font-size:1rem;"
