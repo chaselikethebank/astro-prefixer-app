@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>CSS Class Prefixer</title></head> <body style="font-family:sans-serif; padding:1rem; max-width:900px; margin:auto;"> <div style="max-width:900px; margin:2rem auto; padding:1rem; font-size:0.75rem; line-height:1.2;"> <h1>CSS Class Prefixer</h1> <h2>About</h2> <p>
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>CSS Class Prefixer</title></head> <body style="font-family:sans-serif; padding:1rem; max-width:900px; margin:auto;"> <div style="max-width:900px; margin:2rem auto; padding:1rem; font-size:0.75rem; line-height:.75;"> <h1>CSS Class Prefixer</h1> <h2>About</h2> <p>
 When you prefix a CSS framework (to avoid naming collisions with other
         frameworks in your codebase), you can no longer simply copy and paste UI
         components from the framework's documentation. This app solves that
@@ -8,27 +8,9 @@ Set your prefix. Paste your code. Submit. Copy your prefixed code.
 </p> <p style="font-style:italic;">
 *Note: This tool works with any CSS framework by prefixing all class
         names in your HTML.*
-</p> <label for="prefix">Prefix):</label><br> <input style="font-size:0.75rem;" id="prefix" type="text" value="x" style="font-size:1rem; padding:0.3rem; width:8rem; margin-bottom:1rem;"><br> <label for="input">Paste your HTML snippet:</label><br> <textarea style="font-size:0.75rem;" value="<div class=&#34;card&#34;>
-  <header class=&#34;card-header&#34;>
-    <p class=&#34;card-header-title&#34;>Card header</p>
-      <button class=&#34;card-header-icon&#34; aria-label=&#34;more options&#34;>
-        <span class=&#34;icon&#34;>
-          <i class=&#34;fas fa-angle-down&#34; aria-hidden=&#34;true&#34;></i>
-        </span>
-      </button>
-  </header>
-</div>" id="input" rows="10" cols="80" placeholder="<div class=&#34;card&#34;>
-  <header class=&#34;card-header&#34;>
-    <p class=&#34;card-header-title&#34;>Card header</p>
-      <button class=&#34;card-header-icon&#34; aria-label=&#34;more options&#34;>
-        <span class=&#34;icon&#34;>
-          <i class=&#34;fas fa-angle-down&#34; aria-hidden=&#34;true&#34;></i>
-        </span>
-      </button>
-  </header>
-</div>" style="font-family: monospace; font-size: 0.9rem; margin-bottom:1rem;"></textarea><br> <button style="font-size:0.75rem;" type="button" onclick="prefixClasses()" style="padding: 0.5rem 1rem; font-size:1rem; margin-bottom:1rem;">
+</p> <label for="prefix">Prefix):</label><br> <input style="font-size:0.75rem;" id="prefix" type="text" value="x" style="font-size:1rem; padding:0.3rem; width:8rem; margin-bottom:1rem;"><br> <label for="input">Paste your HTML snippet:</label><br> <textarea style="font-size:0.75rem;" id="input" rows="10" cols="80" placeholder="Paste your HTML here" style="font-family: monospace; font-size: 0.9rem; margin-bottom:1rem;"></textarea><br> <button type="button" onclick="prefixClasses()" style="padding: 0.5rem 1rem; font-size:0.75rem; margin-bottom:1rem;">
 Prefix Classes
-</button> <br> <label for="output">Prefixed HTML output:</label><br> <textarea style="font-size:0.75rem;" id="output" rows="10" cols="80" readonly placeholder="Prefixed output will appear here" style="font-family: monospace; font-size: 0.9rem; margin-bottom:1rem;"></textarea><br> <button style="font-size:0.75rem;" type="button" onclick="copyOutput()" style="padding: 0.5rem 1rem; font-size:1rem;">
+</button> <br> <label for="output">Prefixed HTML output:</label><br> <textarea style="" id="output" rows="10" cols="80" readonly placeholder="Prefixed output will appear here" style="font-family: monospace; font-size:0.75rem; margin-bottom:1rem;"></textarea><br> <button style="font-size:0.75rem;" type="button" onclick="copyOutput()" style="padding: 0.5rem 1rem; font-size:1rem;">
 Copy Output
 </button> <script type="module">
         import { prefixClasses, copyOutput } from "./prefixer.js";
