@@ -5,64 +5,65 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>CSS Class Prefixer</title>
   </head>
   <body
     style="font-family:sans-serif; padding:1rem; max-width:900px; margin:auto;"
   >
-    <h1>CSS Class Prefixer</h1>
+    <div style="max-width:900px; margin:2rem auto; padding:1rem;">
+      <h1>CSS Class Prefixer</h1>
 
-    <label for="prefix">Prefix):</label><br />
-    <input
-      id="prefix"
-      type="text"
-      value="x"
-      style="font-size:1rem; padding:0.3rem; width:8rem; margin-bottom:1rem;"
-    /><br />
+      <label for="prefix">Prefix):</label><br />
+      <input
+        id="prefix"
+        type="text"
+        value="x"
+        style="font-size:1rem; padding:0.3rem; width:8rem; margin-bottom:1rem;"
+      /><br />
 
-    <label for="input">Paste your HTML snippet:</label><br />
-    <textarea
-      id="input"
-      rows="10"
-      cols="80"
-      placeholder="Paste your HTML here"
-      style="font-family: monospace; font-size: 0.9rem; margin-bottom:1rem;"
-    ></textarea><br />
+      <label for="input">Paste your HTML snippet:</label><br />
+      <textarea
+        id="input"
+        rows="10"
+        cols="80"
+        placeholder="Paste your HTML here"
+        style="font-family: monospace; font-size: 0.9rem; margin-bottom:1rem;"
+      ></textarea><br />
 
-    <button
-      type="button"
-      onclick="prefixClasses()"
-      style="padding: 0.5rem 1rem; font-size:1rem; margin-bottom:1rem;"
-    >
-      Prefix Classes
-    </button>
-    <br />
+      <button
+        type="button"
+        onclick="prefixClasses()"
+        style="padding: 0.5rem 1rem; font-size:1rem; margin-bottom:1rem;"
+      >
+        Prefix Classes
+      </button>
+      <br />
 
-    <label for="output">Prefixed HTML output:</label><br />
-    <textarea
-      id="output"
-      rows="10"
-      cols="80"
-      readonly
-      placeholder="Prefixed output will appear here"
-      style="font-family: monospace; font-size: 0.9rem; margin-bottom:1rem;"
-    ></textarea><br />
+      <label for="output">Prefixed HTML output:</label><br />
+      <textarea
+        id="output"
+        rows="10"
+        cols="80"
+        readonly
+        placeholder="Prefixed output will appear here"
+        style="font-family: monospace; font-size: 0.9rem; margin-bottom:1rem;"
+      ></textarea><br />
 
-    <button
-      type="button"
-      onclick="copyOutput()"
-      style="padding: 0.5rem 1rem; font-size:1rem;"
-    >
-      Copy Output
-    </button>
+      <button
+        type="button"
+        onclick="copyOutput()"
+        style="padding: 0.5rem 1rem; font-size:1rem;"
+      >
+        Copy Output
+      </button>
 
-    <script type="module" src="./prefixer.js"></script>
-
-    <script type="module">
-      import { prefixClasses, copyOutput } from "./prefixer.js";
-      window.prefixClasses = prefixClasses;
-      window.copyOutput = copyOutput;
-    </script>
-
+      <script type="module">
+        import { prefixClasses, copyOutput } from "./prefixer.js";
+        window.prefixClasses = prefixClasses;
+        window.copyOutput = copyOutput;
+      </script>
+    </div>
   </body>
 </html>
